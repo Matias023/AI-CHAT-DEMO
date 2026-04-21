@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matías Chat Box - Asistente AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="avatar">
+                    <span>M</span>
+                </div>
+                <div class="header-info">
+                    <h1 class="assistant-name">Matías Chat Box</h1>
+                    <p class="assistant-subtitle" id="assistantSubtitle">Asistente local de prueba</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="status-badge" id="statusBadge">
+                    <span class="status-dot online" id="statusDot"></span>
+                    <span class="status-text" id="statusText">Online</span>
+                </div>
+
+                <div class="tokens-badge" id="tokensBadge">
+                    <span class="tokens-icon">⚡</span>
+                    <span class="tokens-text" id="tokensText">990 tokens</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-separator"></div>
+
+        <div class="messages-container" id="messagesContainer"></div>
+
+        <div class="suggestions-bar">
+            <span class="suggestions-label">Sugerencias</span>
+            <div class="suggestions-list" id="suggestionsList"></div>
+        </div>
+
+        <div class="reload-tokens-wrapper" id="reloadTokensWrapper">
+            <button type="button" class="reload-tokens-button" id="reloadTokensButton">
+                Recargar tokens
+            </button>
+        </div>
+
+        <div class="input-area">
+            <form id="messageForm" class="message-form">
+                <input
+                    type="text"
+                    id="messageInput"
+                    class="message-input"
+                    placeholder="Escribe tu mensaje..."
+                    autocomplete="off"
+                >
+                <button type="submit" class="send-button" id="sendButton">
+                    <span>Enviar</span>
+                </button>
+            </form>
+
+            <div class="quick-guide">
+                <div class="guide-title">💡 Ideas para comenzar</div>
+                <div class="chips-container">
+                    <button type="button" class="chip" data-query="Hola">Saludo</button>
+                    <button type="button" class="chip" data-query="¿Qué hora es?">Hora</button>
+                    <button type="button" class="chip" data-query="¿Cuál es la fecha de hoy?">Fecha</button>
+                    <button type="button" class="chip" data-query="¿Cómo está el clima?">Clima</button>
+                    <button type="button" class="chip" data-query="5 + 3">Suma</button>
+                    <button type="button" class="chip" data-query="10 - 4">Resta</button>
+                    <button type="button" class="chip" data-query="Cuéntame un chiste">Chiste</button>
+                    <button type="button" class="chip" data-query="Ayúdame a organizar mi día">Organizar día</button>
+                    <button type="button" class="chip" data-query="Dame ideas para aprender IA">Ideas IA</button>
+                    <button type="button" class="chip danger-chip" id="clearChatButton">Limpiar chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
